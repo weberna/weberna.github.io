@@ -29,9 +29,9 @@ however the main theoretic arguments were actually presented two years ago, in [
 
 Since *some* of the conclusions above are empirical, some caution should be taken before fully accepting its conclusions 
 (indeed a [currently under review paper](https://openreview.net/forum?id=ry_WPG-A-&noteId=ry_WPG-A-) in ICLR 2018 gives results that contradict the above paper[^1]), however the theory behind
-it is incredibly appealing, and holds a lot of value in itself. In this post I hope to give a overview of the theory, 
+it is incredibly appealing, and holds a lot of value in itself. In this post I hope to give an overview of the theory, 
 the main points behind it, and what it could possibly mean for the future of deep learning.
-At this point I will proceed with describing the preliminaries to understanding Tishby's information theory-deep learning connection: Rate Distortion Theory, and the Information Bottleneck principle
+At this point I will proceed with describing the preliminaries to understanding Tishby's information theory-deep learning connection: Rate Distortion Theory, and the Information Bottleneck principle.
 The post assumes you have a grasp on the basic ideas of deep learning, and an understanding of *basic* concepts from information theory such entropy and mutual information (this concept is important!).
 This [post](http://colah.github.io/posts/2015-09-Visual-Information/) is a great introduction to these concepts if you need a hand.
 
@@ -67,7 +67,7 @@ As you can see, there may be many elements of \\(X\\) that map to the same \\(t 
 
 **Measuring Compression**
 We now need a good mathematical way to measure how 'compressed' our representation (decided by \\(p(t|x)\\)) is. One natural 
-way to measure how compressed the set of codewords is to measure how much information a codeword contains (on average). 
+way to measure how much we have compressed the set of codewords is to measure how much information a codeword contains (on average). 
 This can be done of course by using the entropy rate of T[^2]. The rate of T can be made arbitrarily large however simply
 by packing redundant information in the codewords. What we are interested in measuring is the best rate we can achieve for a 
 certain type of encoding (recall, this is defined by \\(p(t|x)\\)). It turns out the mutual information between \\(X\\) and \\(T\\)
@@ -78,7 +78,7 @@ compressed a representation \\(T\\) is of \\(X\\) (this should make intuitive se
 information about \\(X\\), which is what we would expect as our representation gets more compressed). Of course, higher values
 of mutual information indicate a less compressed representation. 
 
-**Losing Information** One more thing we need to formalize: we need to define how much information loss is too much information loss, and more particularly, how what constitutes as information loss. We do this by defining a distortion function \\(d(x,t)\\), which takes
+**Losing Information** One more thing we need to formalize: we need to define how much information loss is too much information loss, and more particularly, what constitutes as information loss. We do this by defining a distortion function \\(d(x,t)\\), which takes
 in an element of \\(X\\) and \\(T\\) and outputs a single value indicating how different (ie distorted) \\(x\\) and \\(t\\) are. The exact
 function is arbitrary and must be picked on a per task basis (if our data was images, we would probably want a different distortion measure then if we were using something like text data).
 Example distortion functions include squared difference or
@@ -286,5 +286,5 @@ free to leave a comment if you have any insights into this.
 [^1]: For those interested, a rebuttal from Tishby and Shwartz-Ziv has been posted on the given link
 [^2]: There is a slight difference between the entropy rate and just plain old entropy, the difference however is not important here
 [^3]: It actually turns out that \\(I(X;T)\\) is even better than a lower on the 'best achievable rate'... the two are equivalent!
-[^4]: An alternating algorithm called the Blahut-Arimoto algorithm, a similar method is used to solve the IB equations
+[^4]: The problem can be solved by an alternating algorithm called the Blahut-Arimoto algorithm, a similar method is used to solve the IB equations
 [^5]: See (Shamir, Sabato, and Tishby, 2008) for the proof of this bound, as well as the other generalization bounds for IB
