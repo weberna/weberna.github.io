@@ -2,6 +2,7 @@
 layout: post
 title:  "Steps Towards Understanding Deep Learning: The Information Bottleneck Connection (Part 1)"
 date:   2017-11-08 00:29:36 -0500
+comments: true
 categories: jekyll update
 ---
 
@@ -26,7 +27,7 @@ praise from Geoffrey Hinton himself) has been the work of [Naftali Tishby's lab]
 as to why these models can generalize. Most of the excitement revolves around the work titled ["Opening the Black Box of Deep Neural Networks via Information"](https://arxiv.org/abs/1703.00810)
 however the main theoretic arguments were actually presented two years ago, in [2015](https://arxiv.org/abs/1503.02406).
 
-Since the *some* of the conclusions above are empirical, some caution should be taken before fully accepting its conclusions 
+Since *some* of the conclusions above are empirical, some caution should be taken before fully accepting its conclusions 
 (indeed a [currently under review paper](https://openreview.net/forum?id=ry_WPG-A-&noteId=ry_WPG-A-) in ICLR 2018 gives results that contradict the above paper[^1]), however the theory behind
 it is incredibly appealing, and holds a lot of value in itself. In this post I hope to give a overview of the theory, 
 the main points behind it, and what it could possibly mean for the future of deep learning.
@@ -38,7 +39,7 @@ This [post](http://colah.github.io/posts/2015-09-Visual-Information/) is a great
 
 What exactly is the connection between information theory (IT) and deep learning (DL)? Rather than jump right into connection between the two 
 it actually helps to first understand the Information Bottleneck (IB) principle. As we will see, once we understand 
-IB, the connection between IF and DL arises quite naturally. The main purpose of IB is to answer the following question: "How
+IB, the connection between IT and DL arises quite naturally. The main purpose of IB is to answer the following question: "How
 do we define what information in relevant, in a rigorous way?" This seems rather counter-intuitive, as the 'relevancy' of 
 information seems rather subjective. Information theory as laid out by Claude Shannon omits any notion of 'meaning' in the
 information, and without meaning, how can we possibly measure relevancy?
