@@ -14,11 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: weberna's blog 
+author: Noah Weber
 #email: nwweber@cs.stonybrook.edu 
 description: >- # this means to ignore newlines until "baseurl:"
     A machine learning blog on various topics. A splendid time guarenteed for all.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://weberna.github.io  # the base hostname & protocol for your site, e.g. http://example.com
+url: https://weberna.github.io  # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username: weberna
 
@@ -27,6 +28,8 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
