@@ -15,3 +15,5 @@ I am currently a Research Assistant at [Stony Brook University](www.stonybrook.e
 * **"Efficient Quartet Representations of Trees and Applications to Supertree and Summary Methods."** Ruth Davidson, MaLyn Lawhorn, Joseph Rusinko, and Noah Weber. *IEEE/ACM Transactions on 
 Computational Biology and Bioinformatics*. 2015.
 
+A \* indicates equal contribution 
+
